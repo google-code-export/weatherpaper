@@ -1,0 +1,10 @@
+#summary Todo list
+
+= Todo =
+
+  * Extend Tango pack with images from Wikimedia
+  * Read wallpaper settings and images out of zip file for the wallpaper packs
+  * Fill in SaveSettings function
+  * Add code backend to GUI settings editor
+  * Modify program to look for setting in "$HOME/.weatherpaper/" in Linux and in "$AppSettings\WeatherPaper\" in Windows
+  * Update Windows installer
