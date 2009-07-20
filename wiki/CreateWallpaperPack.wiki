@@ -1,0 +1,9 @@
+#summary This guide will show you how to create and distribute a custom wallpaper pack.
+
+= Introduction =
+
+WeatherPaper supports custom wallpaper packs. Wallpaper packs are collections of wallpaper images and ...
+
+= Creating a Custom Wallpaper Pack =
+
+...
