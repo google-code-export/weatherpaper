@@ -2,7 +2,9 @@
 
 = Platform =
 
-WeatherPaper has been tested on Windows(XP, Vista) and Linux.
+== Windows ==
+
+Windows XP and Vista are supported. Download from here
 
 
 = Details =
