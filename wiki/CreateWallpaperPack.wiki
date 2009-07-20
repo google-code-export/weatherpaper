@@ -1,9 +1,62 @@
 #summary This guide will show you how to create and distribute a custom wallpaper pack.
 
+<wiki:toc max_depth="1" />
+
 = Introduction =
 
 WeatherPaper supports custom wallpaper packs. Wallpaper packs are collections of wallpaper images and ...
 
 = Creating a Custom Wallpaper Pack =
 
-...
+== wallpapers.xml ==
+
+== overlay.xml ==
+
+= Example =
+
+Lets say I found a pack of high-resolution weather icons in the public domain. I would like to use these as the images for a new wallpaper pack.
+
+The images are: "sunny.jpg", "cloudy.jpg", "storm.jpg", "unknown.jpg". I will create a new folder, "Tango", and copy all my images into it. Next I create two new documents, "wallpapers.xml" and "overlay.xml" in that same directory:
+
+{{{
+Tango
+   |
+   +--sunny.jpg
+   |
+   +--cloudy.jpg
+   |
+   +--storm.jpg
+   |
+   +--unknown.jpg
+   |
+   +--storm.jpg
+   |
+   +--wallpapers.xml
+   |
+   +--overlay.xml
+}}}
+
+Following the guidelines for wallpapers.xml, I come up with
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@title Tango Wallpaper Pack
+@author Steven Nichols & Tango Desktop Project
+@url http://tango.freedesktop.org/Tango_Desktop_Project
+//-->
+<wallpapers>
+    <image codes="0,1,2,3,9,11,12,37,38,39,40,45,47">
+        <file>storm.jpg</file>
+    </image>
+    <image codes="31,32,36">
+        <file>sunny.jpg</file>
+    </image>
+    <image codes="27,28,29,33,34,44">
+        <file>cloudy.jpg</file>
+    </image>
+    <image codes="3200">
+        <file>unknown.jpg</file>
+    </image>
+</wallpapers>
+}}}
+==
