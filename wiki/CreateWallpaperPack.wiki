@@ -42,12 +42,20 @@ The filename is just the name of the image file, such as, "clear-sky.jpg".
 
 Codes is a comma separated list of weather condition codes. For example, "32" is a sunny day and "37" is isolated thunderstorms. The full list of possible code value may be found at http://developer.yahoo.com/weather/#codes
 
-Putting it all together.
+You should *always* include at least one image with the special error code, "-1". This is primarily used when a connection to the Internet cannot be established. This is different from "3200" which is used when no image is defined for the current conditions.
+
+Putting it all together:
 {{{
 <wallpapers>
+    <!-- Stormy weather //-->
     <image codes="0,1,2,3,9,11,12,37,38,39,40,45,47">
         <file>storm.jpg</file>
     </image>
+    <!-- All other weather //-->
+    <image codes="3200">
+        <file>error.jpg</file>
+    </image>
+    <!-- Errors, such as connection problems //-->
     <image codes="-1">
         <file>error.jpg</file>
     </image>
