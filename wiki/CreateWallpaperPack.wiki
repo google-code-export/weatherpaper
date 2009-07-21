@@ -38,11 +38,9 @@ Each image has the following basic structure:
 </image>
 }}}
 
-Codes is a comma separated list of weather condition codes. For example, "32" is a sunny day and "37" is isolated thunderstorms.
+The filename is just the name of the image file, such as, "clear-sky.jpg". 
 
-
-The full list of possible code value may be found at http://developer.yahoo.com/weather/#codes
-
+Codes is a comma separated list of weather condition codes. For example, "32" is a sunny day and "37" is isolated thunderstorms. The full list of possible code value may be found at http://developer.yahoo.com/weather/#codes
 
 Putting it all together.
 {{{
