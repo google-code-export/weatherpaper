@@ -30,7 +30,7 @@ Each image has the following basic structure:
 <image codes="">
   <file>filename</file>
 </image>
-}}
+}}}
 
 
 
