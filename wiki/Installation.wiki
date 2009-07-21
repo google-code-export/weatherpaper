@@ -4,12 +4,10 @@
 
 == Windows ==
 
-Windows XP and Vista are supported. Download from here
+Windows XP and Vista are supported. Download and run the installer.
 
+== Linux ==
 
-= Details =
+At the moment, only GNOME is supported. This is because KDE 4.0 removed the system call that changed and refreshed the desktop background. I have not yet figured out what the new system call is.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+At the moment things are still a bit manual. I am looking into creating a .deb installer.
