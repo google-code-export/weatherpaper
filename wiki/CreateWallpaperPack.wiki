@@ -23,7 +23,7 @@ The first line is always the XML declaration. Following that is an optional info
 //-->
 }}}
 
-The next section links wallpaper images with their respective weather conditions. All image declarations should be contained within the "<wallpapers>" tag.
+The next section links wallpaper images with their respective weather conditions. All image declarations should be contained within the "`<wallpapers>`" tag.
 
 Each image has the following basic structure:
 {{{
