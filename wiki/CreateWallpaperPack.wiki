@@ -42,7 +42,7 @@ The filename is just the name of the image file, such as, "clear-sky.jpg".
 
 Codes is a comma separated list of weather condition codes. For example, "32" is a sunny day and "37" is isolated thunderstorms. The full list of possible code value may be found at http://developer.yahoo.com/weather/#codes
 
-You should *always* include at least one image with the special error code, "-1". This is primarily used when a connection to the Internet cannot be established. This is different from "3200" which is used when no image is defined for the current conditions.
+You should *always* include at least one image with the special error code, "-1". This is primarily used when a connection to the Internet cannot be established. This is different from "3200", which is used when no image is defined for the current conditions.
 
 Putting it all together:
 {{{
