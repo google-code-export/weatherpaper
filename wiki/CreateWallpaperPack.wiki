@@ -10,6 +10,41 @@ WeatherPaper supports custom wallpaper packs. Wallpaper packs are collections of
 
 == wallpapers.xml ==
 
+This is the file that tells WeatherPaper which images are included in the pack and to what weather conditions they correspond. 
+
+The first line is always the XML declaration. Following that is an optional information section. Title, author and url should each be on a single line only. It is prefered that the  identifiers, "@title", "@author", "@url" should contain only lowercase letters.
+
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@title Tango Wallpaper Pack
+@author Steven Nichols & Tango Desktop Project
+@url http://tango.freedesktop.org/Tango_Desktop_Project
+//-->
+}}}
+
+The next section links wallpaper images with their respective weather conditions. All image declarations should be contained within the "<wallpapers>" tag.
+
+Each image has the following basic structure:
+{{{
+<image codes="">
+  <file>filename</file>
+</image>
+}}
+
+
+
+{{{
+<wallpapers>
+    <image codes="0,1,2,3,9,11,12,37,38,39,40,45,47">
+        <file>storm.jpg</file>
+    </image>
+    <image codes="-1">
+        <file>error.jpg</file>
+    </image>
+</wallpapers>
+}}}
+
 == overlay.xml ==
 
 = Example =
