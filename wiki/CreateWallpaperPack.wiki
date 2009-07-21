@@ -76,4 +76,9 @@ And likewise, for overlay.xml, I have:
     </font>
 </overlay>
 }}}
+
+Since I have chosen to use a non-standard font, "AlteHaasGroteskBold.ttf", I will need to copy the font file into the folder as well.
+
+The final step is to create a ZIP file from my Tango folder. I can now share "Tango.zip" with my friends!
+
 ==
