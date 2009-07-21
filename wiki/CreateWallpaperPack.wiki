@@ -33,10 +33,15 @@ The next section links wallpaper images with their respective weather conditions
 
 Each image has the following basic structure:
 {{{
-<image codes="">
-  <file>filename</file>
+<image codes="<!-- condition codes //--->">
+  <file><!-- filename //--></file>
 </image>
 }}}
+
+Codes is a comma separated list of weather condition codes. For example, "32" is a sunny day and "37" is isolated thunderstorms.
+
+
+The full list of possible code value may be found at http://developer.yahoo.com/weather/#codes
 
 
 Putting it all together.
