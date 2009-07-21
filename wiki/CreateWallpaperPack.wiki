@@ -25,6 +25,12 @@ The first line is always the XML declaration. Following that is an optional info
 
 The next section links wallpaper images with their respective weather conditions. All image declarations should be contained within the "`<wallpapers>`" tag.
 
+{{{
+<wallpapers>
+  <!-- Image information will go here //-->
+</wallpapers>
+}}}
+
 Each image has the following basic structure:
 {{{
 <image codes="">
@@ -33,7 +39,7 @@ Each image has the following basic structure:
 }}}
 
 
-
+Putting it all together.
 {{{
 <wallpapers>
     <image codes="0,1,2,3,9,11,12,37,38,39,40,45,47">
