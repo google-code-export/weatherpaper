@@ -8,3 +8,4 @@
   * Add code backend to GUI settings editor
   * ~~Modify program to look for setting in "$HOME/.weatherpaper/" in Linux and in "$AppSettings\WeatherPaper\" in Windows~~
   * ~~Update Windows installer~~
+  * Enforce single instance in Windows
