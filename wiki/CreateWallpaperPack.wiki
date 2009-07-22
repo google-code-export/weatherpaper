@@ -1,6 +1,6 @@
 #summary This guide will show you how to create and distribute a custom wallpaper pack.
 
-<wiki:toc max_depth="1" />
+<wiki:toc max_depth="2" />
 
 = Introduction =
 
@@ -95,9 +95,9 @@ Wallpaper pack designers can also specify exactly what the text overlay should l
 || %degree% || The degree symbol||
 || %errormsg% || The error message, e.g. "Could not connect" ||
 || %forecast% || Plain-text description of the forecast for the rest of the day ||
-|| %feelslike% ||  ||
+|| %feelslike% || Heat index or wind chill ||
 || %temp% || Current temperature, e.g. "86" ||
-|| %title% ||  ||
+|| %title% || The title of the current wallpaper image ||
 || %unit% || The temperature unit abbreviation, e.g., "F" ||
 
 
