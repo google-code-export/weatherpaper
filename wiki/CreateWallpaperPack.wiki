@@ -4,7 +4,7 @@
 
 = Introduction =
 
-WeatherPaper supports custom wallpaper packs. Wallpaper packs are collections of wallpaper images and ...
+WeatherPaper supports custom wallpaper packs.
 
 = Creating a Custom Wallpaper Pack =
 
