@@ -10,7 +10,7 @@ Windows XP and Vista are supported. Download and run the installer.
 
 === Dependencies ===
 
-  * Python (should already be installed)
+  * Python 2.6
   * PIL (may be installed, if not download from http://www.pythonware.com/products/pil)
 
 === Instructions ===
