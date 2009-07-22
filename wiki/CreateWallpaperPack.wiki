@@ -46,6 +46,12 @@ You should *always* include at least one image with the special error code, "-1"
 
 Putting it all together:
 {{{
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@title Tango Wallpaper Pack
+@author Steven Nichols & Tango Desktop Project
+@url http://tango.freedesktop.org/Tango_Desktop_Project
+//-->
 <wallpapers>
     <!-- Stormy weather //-->
     <image codes="0,1,2,3,9,11,12,37,38,39,40,45,47">
@@ -63,6 +69,37 @@ Putting it all together:
 }}}
 
 == overlay.xml ==
+
+Wallpaper pack designers can also specify exactly what the text overlay should look like. This is defined in the "overlay.xml" file. Once again, the first line is the XML declaration. Overlay information is defined between the "`<overlay>`" tag.
+
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<overlay>
+    <font name="TimesNewRoman.ttf" align="right" size="12" fill="#fff" border="2" bordercolor="#000">
+        <line x="-5" y="-120">"%title%"</line>
+        <line>by %author%</line>
+        <line></line>
+        <line>%condition% %temp%%degree%%unit% (Feels like %feelslike%%degree%%unit%)</line>
+        <line>%date%</line>
+        <line>Forecast: %forecast%</line>
+        
+        <errorline x="-5" y="-100">%errormsg%</errorline>
+    </font>
+</overlay>
+}}}
+
+=== Valid Escape Strings ===
+|| %author% || The author of the current wallpaper image ||
+|| %condition% || Plain-text description of the current conditions, e.g., "Partly Cloudy" ||
+|| %date% || The datetime stamp of the last update ||
+|| %degree% || The degree symbol ||
+|| %errormsg% ||  ||
+|| %forecast% || Plain-text description of the forecast for the rest of the day ||
+|| %feelslike% ||  ||
+|| %temp% || Current temperature, e.g. "86" ||
+|| %title% ||  ||
+|| %unit% || The temperature unit abbreviation, e.g., "F" ||
+
 
 = Example =
 
