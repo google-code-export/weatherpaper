@@ -88,7 +88,7 @@ Wallpaper pack designers can also specify exactly what the text overlay should l
 </overlay>
 }}}
 
-=== Valid Escape Strings ===
+|| *Variable* || *Description* ||
 || %author% || The author of the current wallpaper image ||
 || %condition% || Plain-text description of the current conditions, e.g., "Partly Cloudy" ||
 || %date% || The datetime stamp of the last update ||
