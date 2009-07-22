@@ -92,8 +92,8 @@ Wallpaper pack designers can also specify exactly what the text overlay should l
 || %author% || The author of the current wallpaper image ||
 || %condition% || Plain-text description of the current conditions, e.g., "Partly Cloudy" ||
 || %date% || The datetime stamp of the last update ||
-|| %degree% || The degree symbol "&deg;"||
-|| %errormsg% ||  ||
+|| %degree% || The degree symbol||
+|| %errormsg% || The error message, e.g. "Could not connect" ||
 || %forecast% || Plain-text description of the forecast for the rest of the day ||
 || %feelslike% ||  ||
 || %temp% || Current temperature, e.g. "86" ||
