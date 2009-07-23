@@ -26,7 +26,7 @@ $>cp settings.conf tango.zip $HOME/.weatherpaper
 $>mkdir /opt/weatherpaper
 $>cp weatherpaper.py pywapi.py /opt/weatherpaper
 }}}
-Also add this if you are running python 2.5 or earlier:
+Also add this if you are running python 2.5:
 {{{
 $>cp zipfile.py /opt/weatherpaper
 }}}
