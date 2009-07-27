@@ -46,7 +46,7 @@ import ImageDraw
 import ImageFont
 #import TextOverlay
 
-from SingleInstance import *
+#from SingleInstance import *
 
 if(sys.platform == 'win32'):
     import ctypes
@@ -66,6 +66,11 @@ if(sys.platform == 'win32'):
     _TEMP_DIR = os.path.join(os.environ['TMP'], "weatherpaper")
 else:
     _PROG_WORKING_DIR = os.path.join(os.environ['HOME'], ".weatherpaper")
+    if not os.path.isdir(_PROG_WORKING_DIR):
+        pathname = os.path.dirname(sys.argv[0])
+        fullpath = os.path.abspath(pathname)
+        _PROG_WORKING_DIR = fullpath
+        
     _TEMP_DIR = os.path.join("/tmp", "weatherpaper")
 if platform.release() == "XP":
     _OUTPUT_FILE = "wallpaper.bmp"
@@ -247,8 +252,8 @@ def getWallpaper(code):
     # If no matches were found
     # try again using the error code
     if len(wallpaper) == 0:
-        if code != _WEATHER_ERROR_CODE:
-            errorfile = getWallpaper(_WEATHER_ERROR_CODE)
+        if code != "3200":
+            wallpaper.append(getWallpaper("3200"))
         else:
             print "No error wallpaper defined"
             exit(0)
@@ -449,7 +454,7 @@ def drawOverlay(input_file, text):
     # Resize the image to match the current resolution
     if( image.size != (AppSettings['screen_width'], AppSettings['screen_height']) ):
         print "Resize from %s to %s" % (image.size, (AppSettings['screen_width'], AppSettings['screen_height']))
-        image = image.resize((AppSettings['screen_width'], AppSettings['screen_height']), Image.ANTIALIAS)
+        image = image.resize((AppSettings['screen_width'], AppSettings['screen_heightshare']), Image.ANTIALIAS)
     
     # Draw the overlay onto the image   
     TextOverlay.drawTextBorder(image, text, font, fill, shadow, location, AppSettings['overlay_margin_x'], AppSettings['overlay_margin_y'])
@@ -499,6 +504,7 @@ def updateDesktop():
         # http://www.tuxradar.com/content/code-project-use-weather-wallpapers
         cmd = string.join(["gconftool-2 -s /desktop/gnome/background/picture_filename -t string \"",os.path.join(_PROG_WORKING_DIR, _OUTPUT_FILE),"\""],'')
         os.system(cmd)
+    # Linus KDE
     elif detectOS() == 'kde': 
             if os.getenv('KDE_SESSION_VERSION') == '':
                 # KDE 3.5
@@ -506,6 +512,7 @@ def updateDesktop():
                 os.system(cmd)
             else:
                 # KDE 4
+                print "KDE4"
                 cmd = "kwriteconfig --file plasma-appletsrc --group Containments --group 1 --group Wallpaper --group image --key wallpaper %s" % os.path.join(_PROG_WORKING_DIR, _OUTPUT_FILE)
                 os.system(cmd)
     else:
