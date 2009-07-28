@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #Copyright (c) 2009 Steven Nichols <Steven@Steven-Nichols.com>
-
+#
 #Permission is hereby granted, free of charge, to any person obtaining a copy
 #of this software and associated documentation files (the "Software"), to deal
 #in the Software without restriction, including without limitation the rights
@@ -119,6 +119,8 @@ def saveSettings(s):
     """ Writes any changes back to the config file """
     config = ConfigParser.RawConfigParser()
     
+    config.add_section('General')
+
     config.set('General', 'overlay_enabled', s['overlay_enabled'])
     config.set('General', 'wallpaper_pack', s['wallpaper_pack'])
     config.set('General', 'use_feels_like', s['use_feels_like'])
@@ -128,10 +130,27 @@ def saveSettings(s):
     config.set('General', 'screen_height', s['screen_height'])
     config.set('General', 'screen_width', s['screen_width'])
     config.set('General', 'metric_units', s['metric_units'])
-    config.set('General', 'location_id', s['location'])
+    config.set('General', 'location_id', s['location_id'])
     
     config.write(open(os.path.join(_PROG_WORKING_DIR, _PROG_SETTINGS_FILE), "wb"))
 
+def writeNewSettings():
+    """ Creates a brand-new settings file """
+    s = {}
+    
+    s['location_id'] = "USFL0378"
+    s['metric_units'] = False
+    s['screen_width'] = 1280
+    s['screen_height'] = 800
+    s['refresh_delay'] = 10
+    s['hot_threshold'] = 98
+    s['cold_threshold'] = 40
+    s['use_feels_like'] = False
+    s['wallpaper_pack'] = "tango.zip"
+    #s['symlink_enabled'] = False
+    s['overlay_enabled'] = True
+    
+    saveSettings(s)
     
 def getFahrenheit(tempC):
     """Convert degrees Celcius to degrees Fahrenheit"""
@@ -749,7 +768,12 @@ if __name__ == "__main__":
     #appInstance = ApplicationInstance('weatherpaper.pid')
     
     # Load the dictionary of program settings
-    AppSettings = loadSettings()
+    try:
+        AppSettings = loadSettings()
+    except:
+        writeNewSettings()
+        AppSettings = loadSettings()
+        
     
     #ReadCredits()
     
