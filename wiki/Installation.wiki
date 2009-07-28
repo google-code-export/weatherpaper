@@ -8,28 +8,19 @@ Windows XP and Vista are supported. Download and run the installer.
 
 == Linux ==
 
+At the moment, only GNOME and KDE 3.5 are supported. This is because KDE 4.x removed the system call that changed and refreshed the desktop background. I have not yet figured out what the new system call is.
+
 === Dependencies ===
 
   * Python (2.5 or later)
-  * PIL (may be installed, if not download from http://www.pythonware.com/products/pil)
+  * PIL (may already be installed, if not download from http://www.pythonware.com/products/pil)
 
 === Instructions ===
 
-At the moment, only GNOME and KDE 3.5 are supported. This is because KDE 4.0 removed the system call that changed and refreshed the desktop background. I have not yet figured out what the new system call is.
+Run the installer by opening a terminal window and typing
 
-At the moment things are still a bit manual. I am looking into creating a .deb installer and/or a Make installer to automate process.
-
-For now:
 {{{
-$>mkdir $HOME/.weatherpaper
-$>cp settings.conf tango.zip $HOME/.weatherpaper
-$>mkdir /opt/weatherpaper
-$>cp weatherpaper.py pywapi.py /opt/weatherpaper
-}}}
-Also add this if you are running python 2.5:
-{{{
-$>cp zipfile.py /opt/weatherpaper
+$>sudo sh install.sh
 }}}
 
-
-Then add "/opt/weatherpaper/weatherpaper.py" to your startup programs (System->Preferences->Startup Applications in Ubuntu 9.04).
+Then add "/opt/WeatherPaper/weatherpaper.py" to your startup programs (System->Preferences->Startup Applications in Ubuntu 9.04).
