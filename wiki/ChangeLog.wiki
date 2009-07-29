@@ -1,0 +1,10 @@
+#summary Changes made to the program
+
+= 0.1.6 Stable =
+
+  * New Features
+    * Vista support
+    * Weather theme packs
+    * Linux installer
+  * Bug fixes
+    * If no matching weather code exists in wallpapers.xml, program displays image corresponding to "unknown condition".
