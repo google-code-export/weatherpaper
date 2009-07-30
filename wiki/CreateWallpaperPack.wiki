@@ -1,4 +1,5 @@
 #summary This guide will show you how to create and distribute a custom wallpaper pack.
+#labels Featured,Phase-Implementation
 
 <wiki:toc max_depth="2" />
 
