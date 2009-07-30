@@ -1,4 +1,5 @@
 #summary How to install WeatherPaper on your system
+#labels Featured
 
 = Platform =
 
