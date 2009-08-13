@@ -92,9 +92,9 @@ For example:
 
 Line elements should always be enclosed by a font element so the program knows how to display the text. You can use multiple fonts, just remember to include the ".ttf" file for each font in your wallpaper pack.
 
-The line element specifies what text to draw and where to draw it. The positioning is done in terms of x,y-coordinates. Positive values specify a location on the wallpaper using the top-left corner as the origin (e.g. "<line x="15" y="30">my text</line>" would draw "my text" starting 15 pixels from the left of edge of the wallpaper and 30 pixels down from the top edge.) Similarly, negative values specify locations from the bottom-right corner.
+The line element specifies what text to draw and where to draw it. The positioning is done in terms of x,y-coordinates. Positive values specify a location on the wallpaper using the top-left corner as the origin (e.g. "{{{<line x="15" y="30">my text</line>}}}" would draw "my text" starting 15 pixels from the left of edge of the wallpaper and 30 pixels down from the top edge.) Similarly, negative values specify locations from the bottom-right corner.
 
-The x,y-coordinates may be omitted for subsequent lines. This causes each additional line to be placed immediately below the previous line. Additionally, if an empty line element is used, e.g. "<line></line>", a blank line will be drawn.
+The x,y-coordinates may be omitted for subsequent lines. This causes each additional line to be placed immediately below the previous line. Additionally, if an empty line element is used, e.g. "{{{<line></line>}}}", a blank line will be drawn.
 
 The errorline element is a special line element which is only displayed when an error occurs.
 
