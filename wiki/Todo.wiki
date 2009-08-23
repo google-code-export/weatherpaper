@@ -1,4 +1,4 @@
-#summary Todo list
+#summary Things that have to be done
 
 = Todo =
 
