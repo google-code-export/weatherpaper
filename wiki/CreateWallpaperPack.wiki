@@ -96,7 +96,9 @@ The line element specifies what text to draw and where to draw it. The positioni
 
 The x,y-coordinates may be omitted for subsequent lines. This causes each additional line to be placed immediately below the previous line. Additionally, if an empty line element is used, e.g. "{{{<line></line>}}}", a blank line will be drawn.
 
-The errorline element is a special line element which is only displayed when an error occurs.
+The errorline element is a special line element which is displayed instead of the normal overlay when an error occurs.
+
+The following table shows all the variables that can be included in the overlay:
 
 || *Variable* || *Description* ||
 || %author% || The author of the current wallpaper image ||
