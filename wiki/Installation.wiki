@@ -24,4 +24,4 @@ Run the installer by opening a terminal window and typing
 $>sudo sh install.sh
 }}}
 
-Then add "/opt/WeatherPaper/weatherpaper.py" to your startup programs (System->Preferences->Startup Applications in Ubuntu 9.04).
+Start WeatherPaper by navigating to Applications->Accessories->WeatherPaper (Gnome)
