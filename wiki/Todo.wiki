@@ -6,7 +6,7 @@
   * Find and catch rare exceptions
   * Extend Tango pack with images from Wikimedia
   * ~~Platform independent (native looking) GUI settings editor~~
-    * Allow WeatherPaper to be started and stopped from the editor
+    * ~~Allow WeatherPaper to be started and stopped from the editor~~
     * Move text so that preview image doesn't cover up Theme Name/Author
     * Adjust element heights for Windows version
   * Enforce single instance in both Windows and Linux
